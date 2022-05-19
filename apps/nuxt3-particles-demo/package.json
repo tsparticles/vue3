@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0-rc.3"
+  },
+  "dependencies": {
+    "particles.vue3": "^2.0.6",
+    "tsparticles": "^2.0.6"
+  }
+}

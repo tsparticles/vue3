@@ -4,7 +4,7 @@ import { defineNuxtConfig } from "nuxt";
 export default defineNuxtConfig({
   plugins: [
     {
-      src: "~/plugins/particles.vue3.ts",
+      src: "~/plugins/vue3-particles.ts",
       ssr: false,
     },
   ],

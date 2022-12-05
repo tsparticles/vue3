@@ -1,1 +1,1 @@
-declare module "vue3-particles";
+declare module 'vue3-particles'

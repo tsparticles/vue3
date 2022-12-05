@@ -8,20 +8,15 @@
     />
   </div>
 </template>
-<style>
-.bg-white {
-  background: none !important;
-}
-</style>
 <script>
-import { loadFull } from "tsparticles";
+import { loadFull } from 'tsparticles'
 export default {
-  name: "NuxtTutorial",
+  name: 'NuxtTutorial',
   data() {
     return {
       options: {
         background: {
-          color: "#fff",
+          color: '#fff',
         },
         fullScreen: {
           enable: true,
@@ -29,10 +24,10 @@ export default {
         },
         particles: {
           color: {
-            value: "#000",
+            value: '#000',
           },
           links: {
-            color: "#000",
+            color: '#000',
             enable: true,
           },
           move: {
@@ -40,12 +35,17 @@ export default {
           },
         },
       },
-    };
+    }
   },
   methods: {
     particlesInit: async (engine) => {
-      await loadFull(engine);
+      await loadFull(engine)
     },
   },
-};
+}
 </script>
+<style>
+.bg-white {
+  background: none !important;
+}
+</style>

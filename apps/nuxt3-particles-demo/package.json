@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "nuxt": "^3.0.0",
-    "tsparticles": "^2.5.3",
+    "tsparticles": "^2.6.0",
     "vue3-particles": "^2.5.3"
   },
   "dependencies": {

@@ -6337,7 +6337,7 @@ tslib@^2.1.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
   integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
 
-tsparticles-engine@^2.5.2, tsparticles-engine@^2.6.0:
+tsparticles-engine@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/tsparticles-engine/-/tsparticles-engine-2.6.0.tgz#78ae1a9b0270c6d7607529016a96d52a8ada3711"
   integrity sha512-Kai80jf9mjQVP9WVKqCpxegi7HquVMtiniC2PKrY9aO9E546Lsll+ueUdKeWsSoXBVseN1yqHJcpOKkJy61hIw==
@@ -6998,15 +6998,15 @@ vue-router@^4.1.6:
   dependencies:
     "@vue/devtools-api" "^6.4.5"
 
-vue3-particles@^2.5.3:
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/vue3-particles/-/vue3-particles-2.5.3.tgz#262ac5a3582865c1356029611d307bb97847ad10"
-  integrity sha512-Kv+RlMskE+ehDHFunNGqFCPx6dplVRyCQEOSw8oi8vBsU6+JC1JyY4HQ188F7l9RKFMNryXAFuFQRo3awhldng==
+vue3-particles@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/vue3-particles/-/vue3-particles-2.6.0.tgz#3834af119a58e0bb44f29478f8064e6513387611"
+  integrity sha512-NTVtD7o09WnKif94nDR5nhcqcK2+BCaO+yjSB3GUc1ZeLTl6Hdtd3yJLmOPaVPyYVpsBf2zMSpia5N/an7qdcQ==
   dependencies:
-    tsparticles-engine "^2.5.2"
-    vue "^3.2.41"
+    tsparticles-engine "^2.6.0"
+    vue "^3.2.45"
 
-vue@^3.2.41, vue@^3.2.45:
+vue@^3.2.45:
   version "3.2.45"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.45.tgz#94a116784447eb7dbd892167784619fef379b3c8"
   integrity sha512-9Nx/Mg2b2xWlXykmCwiTUCWHbWIj53bnkizBxKai1g61f2Xit700A1ljowpTIM11e3uipOeiPcSqnmBg6gyiaA==

@@ -1,4 +1,4 @@
-import Particles from 'vue3-particles'
+import Particles from '@tsparticles/vue3'
 
 export default defineNuxtPlugin((nuxtApp) => {
   // Doing something with nuxtApp

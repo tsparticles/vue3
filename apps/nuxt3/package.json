@@ -1,5 +1,5 @@
 {
-  "name": "nuxt3-particles-demo",
+  "name": "@tsparticles/nuxt3-demo",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -10,17 +10,16 @@
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:prettier": "prettier --check .",
     "lint": "yarn lint:js && yarn lint:prettier",
-    "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
-    "prepare": "husky install"
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint --cache",
     "*.**": "prettier --check --ignore-unknown"
   },
   "devDependencies": {
+    "@tsparticles/vue3": "^2.7.1",
     "nuxt": "^3.0.0",
-    "tsparticles": "^2.7.1",
-    "vue3-particles": "^2.7.1"
+    "tsparticles": "^2.7.1"
   },
   "dependencies": {
     "@babel/core": "^7.20.7",
@@ -33,7 +32,6 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-vue": "^9.8.0",
-    "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.1",
     "webpack": "^5.75.0"

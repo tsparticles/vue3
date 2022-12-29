@@ -1,0 +1,20 @@
+{
+  "name": "@tsparticles/vue3-workspace",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "lerna run build"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "husky": "^8.0.2",
+    "lerna": "^6.3.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "components/*",
+    "components-legacy/*"
+  ]
+}

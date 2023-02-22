@@ -1,5 +1,5 @@
 {
-  "name": "@tsparticles/vue3-workspace",
+  "name": "vue3-particles-workspace",
   "version": "0.0.0",
   "private": true,
   "scripts": {

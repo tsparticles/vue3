@@ -1,5 +1,5 @@
 {
-  "name": "@tsparticles/nuxt3-demo",
+  "name": "nuxt3-particles-demo",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -17,9 +17,9 @@
     "*.**": "prettier --check --ignore-unknown"
   },
   "devDependencies": {
-    "@tsparticles/vue3": "^2.7.1",
+    "vue3-particles": "^2.9.3",
     "nuxt": "^3.0.0",
-    "tsparticles": "^2.7.1"
+    "tsparticles": "^2.9.3"
   },
   "dependencies": {
     "@babel/core": "^7.20.7",

@@ -1,1 +1,1 @@
-declare module '@tsparticles/vue3'
+declare module 'vue3-particles'

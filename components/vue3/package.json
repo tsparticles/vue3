@@ -68,14 +68,14 @@
         "lint": "echo eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
     },
     "repository": {
-        "url": "https://github.com/matteobruni/tsparticles",
+        "url": "https://github.com/tsparticles/vue3",
         "type": "git",
         "directory": "components/vue3"
     },
     "author": "Matteo Bruni <matteo.bruni@me.com>",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/matteobruni/tsparticles/issues"
+        "url": "https://github.com/tsparticles/vue3/issues"
     },
     "homepage": "https://particles.js.org",
     "funding": [

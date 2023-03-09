@@ -1,7 +1,7 @@
 import type { App } from "vue";
 import particles from "./Particles.vue";
 
-const VueParticles = (app: App, options: unknown) => {
+const VueParticles = (app: App) => {
     app.component("Particles", particles);
 };
 

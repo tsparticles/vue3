@@ -109,8 +109,8 @@ importers:
         specifier: ^11.0.2
         version: 11.0.2(eslint-plugin-vue@9.8.0)(eslint@8.34.0)(typescript@4.9.4)
       '@vue/tsconfig':
-        specifier: ^0.1.3
-        version: 0.1.3(@types/node@18.11.18)
+        specifier: ^0.3.0
+        version: 0.3.0
       eslint:
         specifier: ^8.32.0
         version: 8.34.0
@@ -167,8 +167,8 @@ importers:
         specifier: ^11.0.2
         version: 11.0.2(eslint-plugin-vue@9.8.0)(eslint@8.34.0)(typescript@4.9.4)
       '@vue/tsconfig':
-        specifier: ^0.1.3
-        version: 0.1.3(@types/node@18.11.18)
+        specifier: ^0.3.0
+        version: 0.3.0
       eslint:
         specifier: ^8.32.0
         version: 8.34.0
@@ -222,8 +222,8 @@ importers:
         specifier: ^11.0.2
         version: 11.0.2(eslint-plugin-vue@9.8.0)(eslint@8.34.0)(typescript@4.9.4)
       '@vue/tsconfig':
-        specifier: ^0.1.3
-        version: 0.1.3(@types/node@18.11.18)
+        specifier: ^0.3.0
+        version: 0.3.0
       eslint:
         specifier: ^8.32.0
         version: 8.34.0
@@ -3365,15 +3365,8 @@ packages:
   /@vue/shared@3.2.47:
     resolution: {integrity: sha512-BHGyyGN3Q97EZx0taMQ+OLNuZcW3d37ZEVmEAyeoA9ERdGvm9Irc/0Fua8SNyOtV1w6BS4q25wbMzJujO9HIfQ==}
 
-  /@vue/tsconfig@0.1.3(@types/node@18.11.18):
-    resolution: {integrity: sha512-kQVsh8yyWPvHpb8gIc9l/HIDiiVUy1amynLNpCy8p+FoCiZXCo6fQos5/097MmnNZc9AtseDsCrfkhqCrJ8Olg==}
-    peerDependencies:
-      '@types/node': '*'
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-    dependencies:
-      '@types/node': 18.11.18
+  /@vue/tsconfig@0.3.0:
+    resolution: {integrity: sha512-q/6xf5nbmCcJ5jTzJapIPRiBfJGunfuKh0jvl3o/25Wn93ZHkiYTB+rR0pj+2lZ9cCrkK/f4JLuhe4jGLwtwMw==}
     dev: true
 
   /@vueuse/head@1.0.22(vue@3.2.45):

@@ -7,10 +7,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@commitlint/cli": "^17.3.0",
-    "@commitlint/config-conventional": "^17.3.0",
-    "husky": "^8.0.2",
-    "lerna": "^6.3.0"
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "husky": "^8.0.3",
+    "lerna": "^6.6.2"
   },
   "workspaces": [
     "apps/*",

@@ -117,8 +117,8 @@ importers:
         specifier: ^11.0.3
         version: 11.0.3(eslint-plugin-vue@9.11.1)(eslint@8.40.0)(typescript@5.0.4)
       '@vue/tsconfig':
-        specifier: ^0.3.2
-        version: 0.3.2
+        specifier: ^0.4.0
+        version: 0.4.0
       eslint:
         specifier: ^8.40.0
         version: 8.40.0
@@ -178,8 +178,8 @@ importers:
         specifier: ^11.0.3
         version: 11.0.3(eslint-plugin-vue@9.11.1)(eslint@8.40.0)(typescript@5.0.4)
       '@vue/tsconfig':
-        specifier: ^0.3.2
-        version: 0.3.2
+        specifier: ^0.4.0
+        version: 0.4.0
       eslint:
         specifier: ^8.40.0
         version: 8.40.0
@@ -236,8 +236,8 @@ importers:
         specifier: ^11.0.3
         version: 11.0.3(eslint-plugin-vue@9.11.1)(eslint@8.40.0)(typescript@5.0.4)
       '@vue/tsconfig':
-        specifier: ^0.3.2
-        version: 0.3.2
+        specifier: ^0.4.0
+        version: 0.4.0
       eslint:
         specifier: ^8.40.0
         version: 8.40.0
@@ -2704,8 +2704,8 @@ packages:
     resolution: {integrity: sha512-yRrdT1FUWhuLNgj3UUasmToYZ0zR0SOdmVyLa0FHIzbnn00LOiK4lZoPRELMRMnyPy6wwwWHRNmItUeWc2ZGPQ==}
     dev: true
 
-  /@vue/tsconfig@0.3.2:
-    resolution: {integrity: sha512-jWzZbGyrZAEbHYGn0kPzJ+MMtIkIxb0+hL5+RghBowyOxMRs9jMdp5XvpXz3wgCzjRZiUucy29042HBe9cxoYA==}
+  /@vue/tsconfig@0.4.0:
+    resolution: {integrity: sha512-CPuIReonid9+zOG/CGTT05FXrPYATEqoDGNrEaqS4hwcw5BUNM2FguC0mOwJD4Jr16UpRVl9N0pY3P+srIbqmg==}
     dev: true
 
   /@webassemblyjs/ast@1.11.5:

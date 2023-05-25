@@ -29,14 +29,14 @@ createApp(App).use(Particles);
 ```html
 <template>
     <div id="app">
-        <Particles
+        <vue-particles
             id="tsparticles"
             :particlesInit="particlesInit"
             :particlesLoaded="particlesLoaded"
             url="http://foo.bar/particles.json"
         />
 
-        <Particles
+        <vue-particles
             id="tsparticles"
             :particlesInit="particlesInit"
             :particlesLoaded="particlesLoaded"

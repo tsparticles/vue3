@@ -1,7 +1,7 @@
 <template>
     <div>
         <NuxtWelcome />
-        <Particles
+        <vue-particles
             id="tsparticles"
             :options="options"
             :particles-init="particlesInit"

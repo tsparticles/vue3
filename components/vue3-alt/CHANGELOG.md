@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.10.1 (2023-06-04)
+
+
+### Features
+
+* adding vue-particles tag ([8b12d56](https://github.com/tsparticles/vue3/commit/8b12d5654515d52729ea7902f5e16806ddd48422))
+
+
+
+
+
 ## [2.9.3](https://github.com/matteobruni/tsparticles/compare/particles.vue3@2.9.2...particles.vue3@2.9.3) (2023-02-12)
 
 **Note:** Version bump only for package particles.vue3

@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import type { Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
-import { basic } from "tsparticles-demo-configs";
+import configs from "tsparticles-demo-configs";
 
 import HelloWorld from "./components/HelloWorld.vue";
 import TheWelcome from "./components/TheWelcome.vue";
 
-const options = basic;
+const options = configs.basic;
 const particlesInit = async (engine: Engine) => {
     await loadFull(engine);
 };

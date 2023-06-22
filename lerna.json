@@ -1,11 +1,6 @@
 {
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
-  "packages": [
-    "apps/*",
-    "components/*",
-    "components-legacy/*"
-  ],
-  "useWorkspaces": true,
+  "packages": ["apps/*", "components/*", "components-legacy/*"],
   "version": "2.10.1",
   "npmClient": "pnpm",
   "conventionalCommits": true,

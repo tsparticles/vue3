@@ -124,10 +124,12 @@ createApp(App).use(Particles);
 ```
 
 ```javascript
-import { loadFull } from "tsparticles";
+//import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
+import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 
 const particlesInit = async engine => {
-    await loadFull(engine);
+    //await loadFull(engine);
+    await loadSlim(engine);
 };
 
 const particlesLoaded = async container => {

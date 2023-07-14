@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.11.0](https://github.com/tsparticles/vue3/compare/v2.10.1...v2.11.0) (2023-07-14)
+
+**Note:** Version bump only for package vue3-demo
+
+
+
+
+
 ## 2.10.1 (2023-06-04)
 
 

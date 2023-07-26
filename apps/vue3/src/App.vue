@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Engine } from "tsparticles-engine";
+import type { Container, Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
 import configs from "tsparticles-demo-configs";
 
@@ -7,8 +7,15 @@ import HelloWorld from "./components/HelloWorld.vue";
 import TheWelcome from "./components/TheWelcome.vue";
 
 const options = configs.basic;
+
 const particlesInit = async (engine: Engine) => {
     await loadFull(engine);
+
+    console.log(engine);
+};
+
+const particlesLoaded = async (container: Container) => {
+    console.log(container);
 };
 </script>
 
@@ -30,7 +37,8 @@ const particlesInit = async (engine: Engine) => {
     <main>
         <TheWelcome />
 
-        <vue-particles id="tsparticles" :options="options" :particlesInit="particlesInit" />
+        <vue-particles id="tsparticles" :options="options" :particlesInit="particlesInit"
+                       :particlesLoaded="particlesLoaded" />
     </main>
 </template>
 

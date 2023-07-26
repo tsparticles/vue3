@@ -14,24 +14,23 @@ export type IParticlesParams = IParticlesProps;
 let container: Container | undefined;
 
 export default defineComponent({
-    name: "Particles",
     props: {
         id: {
             type: String,
-            required: true,
+            required: true
         },
         options: {
-            type: Object as PropType<IParticlesProps>,
+            type: Object as PropType<IParticlesProps>
         },
         url: {
-            type: String,
+            type: String
         },
         particlesLoaded: {
-            type: Function as PropType<(container: Container) => void>,
+            type: Function as PropType<(container: Container) => void>
         },
         particlesInit: {
-            type: Function as PropType<(engine: Engine) => void>,
-        },
+            type: Function as PropType<(engine: Engine) => Promise<void>>
+        }
     },
     mounted(): void {
         nextTick(async () => {
@@ -45,19 +44,15 @@ export default defineComponent({
                 await this.particlesInit(tsParticles);
             }
 
-            const cb = (cbContainer?: Container) => {
-                container = cbContainer;
+            container = await tsParticles.load({
+                id: this.id,
+                url: this.url,
+                options: this.options
+            });
 
-                if (this.particlesLoaded && container) {
-                    this.particlesLoaded(container);
-                }
-            };
-
-            const loadedContainer = await (this.url
-                ? tsParticles.loadJSON(this.id, this.url)
-                : tsParticles.load(this.id, this.options ?? {}));
-
-            cb(loadedContainer);
+            if (this.particlesLoaded && container) {
+                this.particlesLoaded(container);
+            }
         });
     },
     unmounted(): void {
@@ -66,6 +61,6 @@ export default defineComponent({
 
             container = undefined;
         }
-    },
+    }
 });
 </script>

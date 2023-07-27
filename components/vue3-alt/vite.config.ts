@@ -7,27 +7,27 @@ import dts from "vite-plugin-dts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  build: {
-    lib: {
-      entry: path.resolve(__dirname, "src/components/index.ts"),
-      name: "particles.vue3",
-      fileName: (format) => `particles.vue3.${format}.js`,
-    },
-    rollupOptions: {
-      external: ["vue"],
-      output: {
-        // Provide global variables to use in the UMD build
-        // Add external deps here
-        globals: {
-          vue: "Vue",
+    build: {
+        lib: {
+            entry: path.resolve(__dirname, "src/components/index.ts"),
+            name: "particles.vue3",
+            fileName: format => `particles.vue3.${format}.js`,
         },
-      },
+        rollupOptions: {
+            external: ["vue", "tsparticles-engine"],
+            output: {
+                // Provide global variables to use in the UMD build
+                // Add external deps here
+                globals: {
+                    vue: "Vue",
+                },
+            },
+        },
     },
-  },
-  plugins: [vue(), vueJsx(), dts()],
-  resolve: {
-    alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
+    plugins: [vue(), vueJsx(), dts()],
+    resolve: {
+        alias: {
+            "@": fileURLToPath(new URL("./src", import.meta.url)),
+        },
     },
-  },
 });

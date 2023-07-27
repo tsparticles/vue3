@@ -17,20 +17,20 @@ export default defineComponent({
     props: {
         id: {
             type: String,
-            required: true
+            required: true,
         },
         options: {
-            type: Object as PropType<IParticlesProps>
+            type: Object as PropType<IParticlesProps>,
         },
         url: {
-            type: String
+            type: String,
         },
         particlesLoaded: {
-            type: Function as PropType<(container: Container) => void>
+            type: Function as PropType<(container: Container) => void>,
         },
         particlesInit: {
-            type: Function as PropType<(engine: Engine) => Promise<void>>
-        }
+            type: Function as PropType<(engine: Engine) => Promise<void>>,
+        },
     },
     mounted(): void {
         nextTick(async () => {
@@ -47,7 +47,7 @@ export default defineComponent({
             container = await tsParticles.load({
                 id: this.id,
                 url: this.url,
-                options: this.options
+                options: this.options,
             });
 
             if (this.particlesLoaded && container) {
@@ -61,6 +61,6 @@ export default defineComponent({
 
             container = undefined;
         }
-    }
+    },
 });
 </script>

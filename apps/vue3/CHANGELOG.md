@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.11.1](https://github.com/tsparticles/vue3/compare/v2.11.0...v2.11.1) (2023-07-27)
+
+
+### Bug Fixes
+
+* fixed issue with engine not loading correctly, closes: [#26](https://github.com/tsparticles/vue3/issues/26) ([94e5215](https://github.com/tsparticles/vue3/commit/94e521546b7ed008d7b980e999ca30d0ce3d49db))
+
+
+
+
+
 # [2.11.0](https://github.com/tsparticles/vue3/compare/v2.10.1...v2.11.0) (2023-07-14)
 
 **Note:** Version bump only for package vue3-demo

@@ -5,7 +5,7 @@
     "components/*",
     "components-legacy/*"
   ],
-  "version": "2.11.0",
+  "version": "2.11.1",
   "npmClient": "pnpm",
   "conventionalCommits": true,
   "command": {

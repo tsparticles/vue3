@@ -28,7 +28,7 @@
     "@vue/shared": "^3.3.4",
     "consola": "^3.2.3",
     "eslint": "^8.46.0",
-    "eslint-config-prettier": "^8.10.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-vue": "^9.16.1",
     "lint-staged": "^13.2.3",

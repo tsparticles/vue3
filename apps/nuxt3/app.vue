@@ -13,7 +13,7 @@
 import { loadFull } from "tsparticles";
 import type { ISourceOptions, Container } from "tsparticles-engine";
 
-const options = {
+const options: ISourceOptions = {
   background: {
     color: "#fff"
   },
@@ -36,7 +36,7 @@ const options = {
       value: 100
     }
   }
-} as ISourceOptions
+}
 
 const particlesInit = async (engine) => {
   await loadFull(engine)

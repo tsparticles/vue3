@@ -4,10 +4,12 @@ on:
     branches:
       - main
       - legacy
+      - dev
   pull_request:
     branches:
       - main
       - legacy
+      - dev
 
 #env:
   #NX_CLOUD_DISTRIBUTED_EXECUTION: true

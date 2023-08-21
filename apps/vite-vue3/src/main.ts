@@ -1,11 +1,9 @@
 import { createApp } from "vue";
-import Particles from "vue3-particles";
+import { ParticlesPlugin } from "@tsparticles/vue";
 import App from "./App.vue";
-
-import "./assets/main.css";
 
 const app = createApp(App);
 
-app.use(Particles);
+app.use(ParticlesPlugin);
 
 app.mount("#app");

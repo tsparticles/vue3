@@ -2,65 +2,56 @@
     <div :id="id"></div>
 </template>
 
-<script lang="ts">
-import { defineComponent, nextTick } from "vue";
-import type { PropType } from "vue";
+<script setup lang="ts">
+import { nextTick, onMounted, onUnmounted, ref } from "vue";
 import { tsParticles } from "tsparticles-engine";
 import type { Container, ISourceOptions, Engine } from "tsparticles-engine";
 
 export type IParticlesProps = ISourceOptions;
 export type IParticlesParams = IParticlesProps;
 
-let container: Container | undefined;
+const container = ref<Container | undefined>();
 
-export default defineComponent({
-    props: {
-        id: {
-            type: String,
-            required: true,
-        },
-        options: {
-            type: Object as PropType<IParticlesProps>,
-        },
-        url: {
-            type: String,
-        },
-        particlesLoaded: {
-            type: Function as PropType<(container: Container) => void>,
-        },
-        particlesInit: {
-            type: Function as PropType<(engine: Engine) => Promise<void>>,
-        },
-    },
-    mounted(): void {
-        nextTick(async () => {
-            if (!this.id) {
-                throw new Error("Prop 'id' is required!");
-            }
+const props = defineProps<{
+    id: string;
+    options?: IParticlesProps;
+    url?: string;
+    particlesInit?: (engine: Engine) => Promise<void>;
+}>();
 
-            tsParticles.init();
+const emit = defineEmits<{
+    (e: "particlesLoaded", container: Container): void;
+}>();
 
-            if (this.particlesInit) {
-                await this.particlesInit(tsParticles);
-            }
-
-            container = await tsParticles.load({
-                id: this.id,
-                url: this.url,
-                options: this.options,
-            });
-
-            if (this.particlesLoaded && container) {
-                this.particlesLoaded(container);
-            }
-        });
-    },
-    unmounted(): void {
-        if (container) {
-            container.destroy();
-
-            container = undefined;
+onMounted(() => {
+    nextTick(async () => {
+        if (!props.id) {
+            throw new Error("Prop 'id' is required!");
         }
-    },
+
+        tsParticles.init();
+
+        if (props.particlesInit) {
+            await props.particlesInit(tsParticles);
+        }
+
+        container.value = await tsParticles.load({
+            id: props.id,
+            url: props.url,
+            options: props.options,
+        });
+
+        if (container.value) {
+            emit("particlesLoaded", container.value);
+        }
+    });
+});
+
+onUnmounted(() => {
+    if (container.value) {
+        container.value.destroy();
+
+        container.value = undefined;
+    }
 });
 </script>

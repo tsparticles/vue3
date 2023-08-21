@@ -1,44 +1,24 @@
 <template>
   <div>
-    <NuxtWelcome />
-    <vue-particles
-      id="tsparticles"
-      :options="options"
-      :particles-init="particlesInit"
-      @particles-loaded="particlesLoaded"
-    />
+    <ClientOnly>
+      <Particles
+        id="tsparticles"
+        :options="options"
+        :init="particlesInit"
+        @load="particlesLoaded"
+      />
+    </ClientOnly>
+    <NuxtWelcome :style="{ zIndex: 999, background: '#fff' }" />
   </div>
 </template>
 <script setup lang="ts">
 import { loadFull } from "tsparticles";
-import type { ISourceOptions, Container } from "tsparticles-engine";
+import type { ISourceOptions, Container, Engine } from "tsparticles-engine";
+import configs from "tsparticles-demo-configs";
 
-const options: ISourceOptions = {
-  background: {
-    color: "#fff"
-  },
-  fullScreen: {
-    enable: true,
-    zIndex: -1
-  },
-  particles: {
-    color: {
-      value: "#000"
-    },
-    links: {
-      color: "#000",
-      enable: true
-    },
-    move: {
-      enable: true
-    },
-    number: {
-      value: 100
-    }
-  }
-}
+const options = configs.basic
 
-const particlesInit = async (engine) => {
+const particlesInit = async (engine: Engine) => {
   await loadFull(engine)
 }
 
@@ -47,8 +27,3 @@ const particlesLoaded = (container: Container) => {
 }
 
 </script>
-<style>
-.bg-white {
-  background: none !important;
-}
-</style>

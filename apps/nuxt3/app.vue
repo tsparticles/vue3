@@ -11,8 +11,7 @@
 </template>
 <script setup lang="ts">
 import { loadFull } from "tsparticles";
-import type { IOptions } from "tsparticles-engine";
-import {Container} from "tsparticles-engine";
+import type { ISourceOptions, Container } from "tsparticles-engine";
 
 const options = {
   background: {
@@ -37,7 +36,7 @@ const options = {
       value: 100
     }
   }
-} as IOptions
+} as ISourceOptions
 
 const particlesInit = async (engine) => {
   await loadFull(engine)

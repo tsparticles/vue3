@@ -7,8 +7,6 @@ const options = configs.basic;
 
 const particlesInit = async (engine: Engine) => {
   await loadFull(engine);
-
-  console.log(engine);
 };
 
 const particlesLoaded = async (container: Container) => {

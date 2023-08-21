@@ -40,7 +40,6 @@ const options: ISourceOptions = {
 
 const particlesInit = async (engine) => {
   await loadFull(engine)
-  console.log(engine)
 }
 
 const particlesLoaded = (container: Container) => {

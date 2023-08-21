@@ -44,7 +44,7 @@ const particlesInit = async (engine) => {
 }
 
 const particlesLoaded = (container: Container) => {
-  console.log(toRaw(container))
+  console.log(container)
 }
 
 </script>

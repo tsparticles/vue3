@@ -3,7 +3,7 @@
   "version": "2.12.0",
   "private": true,
   "scripts": {
-    "setup-vue-demi": "npx vue-demi-switch 3",
+    "setup-vue-demi": "pnpm exec vue-demi-switch 3",
     "build": "pnpm run setup-vue-demi && nuxt build",
     "dev": "pnpm run setup-vue-demi && nuxt dev",
     "generate": "pnpm run setup-vue-demi && nuxt generate",

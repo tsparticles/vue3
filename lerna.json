@@ -1,7 +1,8 @@
 {
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "packages": [
-    "apps/*",
+    "apps/nuxt3",
+    "apps/vite-vue3",
     "components/*",
     "components-legacy/*"
   ],

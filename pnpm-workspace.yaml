@@ -1,4 +1,5 @@
 packages:
-  - 'apps/*'
   - 'components/*'
   - 'components-legacy/*'
+  - 'apps/nuxt3'
+  - 'apps/vite-vue3'

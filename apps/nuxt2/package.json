@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "setup-vue-demi": "pnpm dlx vue-demi-switch 2.7",
+    "setup-vue-demi": "pnpm exec vue-demi-switch 2.7",
     "dev": "pnpm run setup-vue-demi && nuxt dev",
     "build": "pnpm run setup-vue-demi && nuxt build",
     "start": "pnpm run setup-vue-demi && nuxt start",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@nuxt/types": "^2.17.1",
+    "vue-demi": "^0.14.5",
     "@nuxt/typescript-build": "^2.1.0"
   }
 }

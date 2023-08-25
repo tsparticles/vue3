@@ -3,7 +3,7 @@
   "version": "2.12.0",
   "private": true,
   "scripts": {
-    "setup-vue-demi": "pnpm exec vue-demi-switch 3",
+    "setup-vue-demi": "pnpm dlx vue-demi-switch 3",
     "dev": "pnpm run setup-vue-demi && vite",
     "build": "pnpm run setup-vue-demi && run-p type-check build-only",
     "build:ci": "pnpm run setup-vue-demi && run-p type-check build-only",

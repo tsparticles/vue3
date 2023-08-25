@@ -1,0 +1,28 @@
+{
+  "name": "tsparticles-nuxt2-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "setup-vue-demi": "pnpm exec vue-demi-switch 2.7",
+    "dev": "pnpm run setup-vue-demi && nuxt dev",
+    "build": "pnpm run setup-vue-demi && nuxt build",
+    "start": "pnpm run setup-vue-demi && nuxt start",
+    "generate": "pnpm run setup-vue-demi && nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/composition-api": "^0.33.1",
+    "@tsparticles/engine": "^3.0.0-beta.1",
+    "@tsparticles/vue": "../../components/vue",
+    "core-js": "^3.25.3",
+    "nuxt": "^2.17.1",
+    "tsparticles": "^3.0.0-beta.1",
+    "vue": "2.7.14",
+    "vue-demi": "^0.14.5",
+    "vue-server-renderer": "2.7.14",
+    "vue-template-compiler": "2.7.14"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.17.1",
+    "@nuxt/typescript-build": "^2.1.0"
+  }
+}

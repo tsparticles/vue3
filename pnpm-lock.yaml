@@ -19,15 +19,15 @@ importers:
 
   apps/nuxt3:
     dependencies:
+      '@tsparticles/demo-configs':
+        specifier: ^3.0.0-alpha.1
+        version: 3.0.0-alpha.1
       '@tsparticles/vue':
         specifier: workspace:^
         version: link:../../components/vue
       tsparticles:
         specifier: ^3.0.0-beta.1
         version: 3.0.0-beta.1
-      tsparticles-demo-configs:
-        specifier: ^2.12.0
-        version: 2.12.0
     devDependencies:
       '@nuxt/devtools':
         specifier: latest
@@ -44,6 +44,9 @@ importers:
 
   apps/vite-vue3:
     dependencies:
+      '@tsparticles/demo-configs':
+        specifier: ^3.0.0-alpha.1
+        version: 3.0.0-alpha.1
       '@tsparticles/engine':
         specifier: ^3.0.0-beta.1
         version: 3.0.0-beta.1
@@ -2335,6 +2338,12 @@ packages:
       '@tsparticles/updater-opacity': 3.0.0-beta.1
       '@tsparticles/updater-out-modes': 3.0.0-beta.1
       '@tsparticles/updater-size': 3.0.0-beta.1
+    dev: false
+
+  /@tsparticles/demo-configs@3.0.0-alpha.1:
+    resolution: {integrity: sha512-byBJPKxInusFeJSXYOfSK7PbwVY2wACIumV4N4VHUdiIMNBzDYJDEK12KhRVGxKsA4uNaWhXySpNjIDG04p8EA==}
+    dependencies:
+      '@tsparticles/engine': 3.0.0-beta.1
     dev: false
 
   /@tsparticles/engine@3.0.0-beta.1:
@@ -9847,17 +9856,6 @@ packages:
   /tslib@2.6.0:
     resolution: {integrity: sha512-7At1WUettjcSRHXCyYtTselblcHl9PJFFVKiCAy/bY97+BPZXSQ2wbq0P9s8tK2G7dFQfNnlJnPAiArVBVBsfA==}
     dev: true
-
-  /tsparticles-demo-configs@2.12.0:
-    resolution: {integrity: sha512-rn7tb7IOVQJjzbqlbAqkCWLiIvHWGQHaTgm27AfPfG3KzOjaJDFkgHwvQokc0ljZd4KiU55s6TvhQS4xRFM7oA==}
-    dependencies:
-      tsparticles-engine: 2.12.0
-    dev: false
-
-  /tsparticles-engine@2.12.0:
-    resolution: {integrity: sha512-ZjDIYex6jBJ4iMc9+z0uPe7SgBnmb6l+EJm83MPIsOny9lPpetMsnw/8YJ3xdxn8hV+S3myTpTN1CkOVmFv0QQ==}
-    requiresBuild: true
-    dev: false
 
   /tsparticles@3.0.0-beta.1:
     resolution: {integrity: sha512-CAAOUqu4iHZwLkb3lx7sg8A6hdPKgTf9ACXsTCsvNJxFGX2IdunRYTQMsLSypwlE9KxJeJeBqAFz1F2Y8Sc9BA==}

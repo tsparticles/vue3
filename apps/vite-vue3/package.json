@@ -3,18 +3,18 @@
   "version": "2.12.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check build-only",
-    "build:ci": "run-p type-check build-only",
+    "setup-vue-demi": "npx vue-demi-switch 3",
+    "dev": "pnpm run setup-vue-demi && vite",
+    "build": "pnpm run setup-vue-demi && run-p type-check build-only",
+    "build:ci": "pnpm run setup-vue-demi && run-p type-check build-only",
     "preview": "vite preview --port 4173",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "tsparticles": "^2.12.0",
-    "tsparticles-demo-configs": "^2.12.0",
-    "tsparticles-engine": "^2.12.0",
+    "tsparticles": "^3.0.0-beta.1",
+    "@tsparticles/engine": "^3.0.0-beta.1",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4",
     "@tsparticles/vue": "workspace:^"

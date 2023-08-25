@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxtjs/composition-api": "^0.33.1",
     "@tsparticles/engine": "^3.0.0-beta.1",
+    "@tsparticles/demo-configs": "^3.0.0-alpha.1",
     "@tsparticles/vue": "../../components/vue",
     "core-js": "^3.25.3",
     "nuxt": "^2.17.1",

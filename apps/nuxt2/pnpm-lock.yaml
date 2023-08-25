@@ -4,6 +4,9 @@ dependencies:
   '@nuxtjs/composition-api':
     specifier: ^0.33.1
     version: 0.33.1(@nuxt/vue-app@2.17.1)(nuxt@2.17.1)(vue@2.7.14)
+  '@tsparticles/demo-configs':
+    specifier: ^3.0.0-alpha.1
+    version: 3.0.0-alpha.1
   '@tsparticles/engine':
     specifier: ^3.0.0-beta.1
     version: 3.0.0-beta.1
@@ -2275,6 +2278,12 @@ packages:
       '@tsparticles/updater-opacity': 3.0.0-beta.1
       '@tsparticles/updater-out-modes': 3.0.0-beta.1
       '@tsparticles/updater-size': 3.0.0-beta.1
+    dev: false
+
+  /@tsparticles/demo-configs@3.0.0-alpha.1:
+    resolution: {integrity: sha512-byBJPKxInusFeJSXYOfSK7PbwVY2wACIumV4N4VHUdiIMNBzDYJDEK12KhRVGxKsA4uNaWhXySpNjIDG04p8EA==}
+    dependencies:
+      '@tsparticles/engine': 3.0.0-beta.1
     dev: false
 
   /@tsparticles/engine@3.0.0-beta.1:

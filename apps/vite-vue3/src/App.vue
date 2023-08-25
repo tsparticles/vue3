@@ -1,21 +1,16 @@
 <template>
   <Particles
     id="tsparticles"
-    :options="particlesConfig"
-    :init="particlesInit"
+    :options="amongUs"
     @load="particlesLoaded"
   />
 </template>
 
 <script setup lang="ts">
 import { Particles } from "@tsparticles/vue";
-import type { Container, Engine } from "@tsparticles/engine";
-import { particlesConfig } from "./particles";
-import { loadFull } from "tsparticles";
+import type { Container } from "@tsparticles/engine";
 
-const particlesInit = async (engine: Engine) => {
-  await loadFull(engine);
-};
+import { amongUs } from "@tsparticles/demo-configs";
 
 const particlesLoaded = async (container: Container) => {
   console.log(container);

@@ -2,8 +2,7 @@
   <div>
     <Particles
       id="tsparticles"
-      :options="particlesConfig"
-      :init="initParticles"
+      :options="amongUs"
       @load="onParticlesLoaded"
     />
   </div>
@@ -11,13 +10,9 @@
 
 <script setup lang="ts">
 import { Particles } from '@tsparticles/vue/dist'
-import type { Engine, Container } from '@tsparticles/engine'
-import { loadFull } from 'tsparticles'
-import { particlesConfig } from '~/lib/particles'
+import type { Container } from '@tsparticles/engine'
 
-const initParticles = async (engine: Engine) => {
-  await loadFull(engine)
-}
+import { amongUs } from '@tsparticles/demo-configs'
 
 const onParticlesLoaded = async (container: Container) => {
   console.log(container)

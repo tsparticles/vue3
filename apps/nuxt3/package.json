@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "tsparticles": "^3.0.0-beta.1",
-    "@tsparticles/demo-configs": "^3.0.0-alpha.1",
+    "@tsparticles/configs": "^3.0.0-beta.1",
     "@tsparticles/vue": "workspace:^"
   }
 }

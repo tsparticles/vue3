@@ -3,7 +3,7 @@
     <ClientOnly>
       <Particles
         id="tsparticles"
-        :options="amongUs"
+        :options="config"
         @load="particlesLoaded"
       />
     </ClientOnly>
@@ -13,13 +13,13 @@
 import { Particles } from '@tsparticles/vue'
 import { loadFull } from 'tsparticles'
 import { tsParticles } from '@tsparticles/engine'
-import { particlesConfig } from '~/lib/particles'
 import type { Container } from '@tsparticles/engine'
 
-import { amongUs } from '@tsparticles/demo-configs'
+const config = ref({})
 
 if(process.client) {
   await loadFull(tsParticles)
+  config.value = (await import('@tsparticles/configs')).default.amongUs
 }
 
 const particlesLoaded = (container: Container) => {

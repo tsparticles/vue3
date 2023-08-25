@@ -2,7 +2,7 @@
   <div>
     <Particles
       id="tsparticles"
-      :options="amongUs"
+      :options="configs.amongUs"
       @load="onParticlesLoaded"
     />
   </div>
@@ -11,8 +11,7 @@
 <script setup lang="ts">
 import { Particles } from '@tsparticles/vue/dist'
 import type { Container } from '@tsparticles/engine'
-
-import { amongUs } from '@tsparticles/demo-configs'
+import configs from '@tsparticles/configs'
 
 const onParticlesLoaded = async (container: Container) => {
   console.log(container)

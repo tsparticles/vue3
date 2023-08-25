@@ -56,8 +56,8 @@
     "canvas-confetti"
   ],
   "scripts": {
-    "build": "pnpm run prettify:src && pnpm run prettify:readme && vue-tsc --noEmit && unbuild",
-    "build:ci": "pnpm run prettify:ci:src && pnpm run prettify:ci:readme && vue-tsc --noEmit && unbuild",
+    "build": "pnpm run prettify:src && pnpm run prettify:readme && unbuild",
+    "build:ci": "pnpm run prettify:ci:src && pnpm run prettify:ci:readme && unbuild",
     "prettify:ci:src": "prettier --check ./src/*",
     "prettify:ci:readme": "prettier --check ./README.md",
     "prettify:src": "prettier --write ./src/*",
@@ -92,7 +92,7 @@
   ],
   "prettier": "@tsparticles/prettier-config",
   "dependencies": {
-    "tsparticles-engine": "^2.12.0",
+    "@tsparticles/engine": "^3.0.0-beta.1",
     "vue-demi": "^0.14.5"
   },
   "devDependencies": {

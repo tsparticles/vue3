@@ -4,12 +4,12 @@
 
 <script setup lang="ts">
 import { onMounted, nextTick, ref, onUnmounted } from "vue-demi";
-import { tsParticles } from "tsparticles-engine";
+import { tsParticles } from "@tsparticles/engine";
 import type {
     Container as ParticlesContainer,
     Engine as ParticlesEngine,
     ISourceOptions as ParticleOptions,
-} from "tsparticles-engine";
+} from "@tsparticles/engine";
 
 const props = defineProps<{
     id: string;

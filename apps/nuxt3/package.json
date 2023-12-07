@@ -34,7 +34,7 @@
     "lint-staged": "^14.0.0",
     "nuxt": "^3.6.5",
     "prettier": "^3.0.1",
-    "tsparticles": "^2.12.0",
+    "tsparticles": "^3.0.0",
     "typescript": "^5.1.6",
     "vue": "^3.3.4",
     "vue3-particles": "workspace:^",

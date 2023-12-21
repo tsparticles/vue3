@@ -1,13 +1,8 @@
 <script setup lang="ts">
-import type { Container, Engine } from "tsparticles-engine";
-import { loadFull } from "tsparticles";
-import configs from "tsparticles-demo-configs";
+import type { Container } from "@tsparticles/engine";
+import configs from "@tsparticles/configs";
 
 const options = configs.basic;
-
-const particlesInit = async (engine: Engine) => {
-  await loadFull(engine);
-};
 
 const particlesLoaded = async (container: Container) => {
   console.log(container);
@@ -19,7 +14,6 @@ const particlesLoaded = async (container: Container) => {
     <vue-particles
       id="tsparticles"
       :options="options"
-      :particles-init="particlesInit"
       @particles-loaded="particlesLoaded"
     />
   </main>

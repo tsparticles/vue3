@@ -1,5 +1,5 @@
 {
-  "name": "vue3-particles-workspace",
+  "name": "@tsparticles/vue3-workspace",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -7,10 +7,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@commitlint/cli": "^17.6.7",
-    "@commitlint/config-conventional": "^17.6.7",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "husky": "^8.0.3",
-    "lerna": "^7.1.4"
+    "lerna": "^8.0.0"
   },
   "workspaces": [
     "apps/*",

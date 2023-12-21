@@ -4,8 +4,7 @@
 
 <script setup lang="ts">
 import { nextTick, onMounted, onUnmounted } from "vue";
-import { type Engine, tsParticles } from "@tsparticles/engine";
-import type { Container, ISourceOptions } from "@tsparticles/engine";
+import { type Container, type ISourceOptions, type Engine, tsParticles } from "@tsparticles/engine";
 
 export type IParticlesProps = ISourceOptions;
 
@@ -39,8 +38,6 @@ const loadParticles = async () => {
         url: props.url,
         options: props.options,
     });
-
-    console.log(container?.particles.filter(() => true));
 
     emit("particlesLoaded", container);
 };

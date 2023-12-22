@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/tsparticles/vue3/compare/v2.12.0...v3.0.0) (2023-12-22)
+
+
+### Bug Fixes
+
+* use event syntax for particlesLoaded ([5b4de3a](https://github.com/tsparticles/vue3/commit/5b4de3a411ede58c00517cf72fbab5bd5acfb882))
+
+
+### Features
+
+* updated for v3 ([c49ca9f](https://github.com/tsparticles/vue3/commit/c49ca9f1aec1f7ddaa0de7806291a5c4c78eb848))
+* updates for v3 ([c62d3d3](https://github.com/tsparticles/vue3/commit/c62d3d30dfcc5307490fb15f2ed132b36036f252))
+
+
+
+
+
 # [2.12.0](https://github.com/tsparticles/vue3/compare/v2.11.1...v2.12.0) (2023-08-04)
 
 **Note:** Version bump only for package vue3-particles

@@ -1,8 +1,8 @@
 [![banner](https://particles.js.org/images/banner3.png)](https://particles.js.org)
 
-# vue3-particles
+# @tsparticles/vue3
 
-[![npm](https://img.shields.io/npm/v/vue3-particles)](https://www.npmjs.com/package/vue3-particles) [![npm](https://img.shields.io/npm/dm/vue3-particles)](https://www.npmjs.com/package/vue3-particles) [![GitHub Sponsors](https://img.shields.io/github/sponsors/matteobruni)](https://github.com/sponsors/matteobruni)
+[![npm](https://img.shields.io/npm/v/@tsparticles/vue3)](https://www.npmjs.com/package/@tsparticles/vue3) [![npm](https://img.shields.io/npm/dm/@tsparticles/vue3)](https://www.npmjs.com/package/@tsparticles/vue3) [![GitHub Sponsors](https://img.shields.io/github/sponsors/matteobruni)](https://github.com/sponsors/matteobruni)
 
 Official [tsParticles](https://github.com/matteobruni/tsparticles) VueJS 3.x component
 
@@ -13,15 +13,22 @@ Official [tsParticles](https://github.com/matteobruni/tsparticles) VueJS 3.x com
 ## Installation
 
 ```shell script
-yarn add vue3-particles
+yarn add @tsparticles/vue3
 ```
 
 ## Usage
 
 ```javascript
-import Particles from "vue3-particles";
+import Particles from "@tsparticles/vue3";
+//import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
+import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 
-createApp(App).use(Particles);
+createApp(App).use(Particles, {
+  init: async engine => {
+    // await loadFull(engine); // you can load the full tsParticles library from "tsparticles" if you need it
+    await loadSlim(engine); // or you can load the slim version from "tsparticles-slim" if don't need Shapes or Animations
+  },
+});
 ```
 
 ### Demo config
@@ -29,16 +36,10 @@ createApp(App).use(Particles);
 ```html
 <template>
     <div id="app">
-        <vue-particles
-            id="tsparticles"
-            :particlesInit="particlesInit"
-            :particlesLoaded="particlesLoaded"
-            url="http://foo.bar/particles.json"
-        />
+        <vue-particles id="tsparticles" :particlesLoaded="particlesLoaded" url="http://foo.bar/particles.json" />
 
         <vue-particles
             id="tsparticles"
-            :particlesInit="particlesInit"
             :particlesLoaded="particlesLoaded"
             :options="{
                     background: {
@@ -57,7 +58,6 @@ createApp(App).use(Particles);
                                 enable: true,
                                 mode: 'repulse'
                             },
-                            resize: true
                         },
                         modes: {
                             bubble: {
@@ -89,7 +89,7 @@ createApp(App).use(Particles);
                         move: {
                             direction: 'none',
                             enable: true,
-                            outMode: 'bounce',
+                            outModes: 'bounce',
                             random: false,
                             speed: 6,
                             straight: false
@@ -97,7 +97,6 @@ createApp(App).use(Particles);
                         number: {
                             density: {
                                 enable: true,
-                                area: 800
                             },
                             value: 80
                         },
@@ -108,8 +107,7 @@ createApp(App).use(Particles);
                             type: 'circle'
                         },
                         size: {
-                            random: true,
-                            value: 5
+                            value: { min: 1, max: 5 }
                         }
                     },
                     detectRetina: true
@@ -120,14 +118,6 @@ createApp(App).use(Particles);
 ```
 
 ```javascript
-//import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
-
-const particlesInit = async engine => {
-    //await loadFull(engine);
-    await loadSlim(engine);
-};
-
 const particlesLoaded = async container => {
     console.log("Particles container loaded", container);
 };
@@ -139,7 +129,7 @@ If TypeScript returns error while importing/using Particles plugin try adding th
 code:
 
 ```typescript
-declare module "vue3-particles";
+declare module "@tsparticles/vue3";
 ```
 
 ## Demos
@@ -156,8 +146,9 @@ There's also a CodePen collection actively maintained and updated [here](https:/
 
 If you are migrating your project from Vue 2.x to 3.x you need to these steps:
 
--   Change the dependency from `vue2-particles` to `vue3-particles`
+-   Change the dependency from `@tsparticles/vue2` to `@tsparticles/vue3`
 -   Update the `node_modules` folder executing `npm install` or `yarn`
--   Change the `use` function from `Vue.use(Particles)` to `createApp(App).use(Particles)`.
+-   Change the `use` function from `Vue.use(Particles, { init: /* omissis */ })`
+    to `createApp(App).use(Particles, { init: /* omissis */ })`.
 
-The `<Particles />` tag syntax remains the same, so you don't need to do any additional action.
+The `<vue-particles />` tag syntax remains the same, so you don't need to do any additional action.

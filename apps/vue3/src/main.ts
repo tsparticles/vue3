@@ -1,12 +1,17 @@
 import { createApp } from "vue";
-import Particles from "vue3-particles";
+import Particles from "@tsparticles/vue3";
 import App from "./App.vue";
-import router from "./router";
 
 import "./assets/main.css";
+import { loadFull } from "tsparticles";
+import type { Engine } from "@tsparticles/engine";
 
 const app = createApp(App);
 
-app.use(router).use(Particles);
+app.use(Particles, {
+    init: async (engine: Engine) => {
+        await loadFull(engine);
+    }
+});
 
 app.mount("#app");

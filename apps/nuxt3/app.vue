@@ -1,55 +1,42 @@
 <template>
-    <div>
-        <NuxtWelcome />
-        <vue-particles
-            id="tsparticles"
-            :options="options"
-            :particles-init="particlesInit"
-        />
-    </div>
+  <div>
+    <!--<NuxtWelcome/>-->
+    <client-only>
+      <vue-particles
+          id="tsparticles"
+          :options="options"
+          @particles-loaded="particlesLoaded"
+      />
+    </client-only>
+  </div>
 </template>
-<script>
-import { loadFull } from "tsparticles";
+<script setup lang="ts">
+import type { ISourceOptions, Container } from "@tsparticles/engine";
 
-export default {
-    name: "NuxtTutorial",
-    data() {
-        return {
-            options: {
-                background: {
-                    color: "#fff"
-                },
-                fullScreen: {
-                    enable: true,
-                    zIndex: -1
-                },
-                particles: {
-                    color: {
-                        value: "#000"
-                    },
-                    links: {
-                        color: "#000",
-                        enable: true
-                    },
-                    move: {
-                        enable: true
-                    },
-                    number: {
-                        value: 100
-                    }
-                }
-            }
-        };
+const options: ISourceOptions = {
+  background: {
+    color: "#000"
+  },
+  particles: {
+    links: {
+      enable: true
     },
-    methods: {
-        particlesInit: async (engine) => {
-            await loadFull(engine);
-        }
+    move: {
+      enable: true
+    },
+    number: {
+      value: 100
     }
-};
+  }
+}
+
+const particlesLoaded = (container?: Container) => {
+  console.log(container)
+}
+
 </script>
 <style>
 .bg-white {
-    background: none !important;
+  background: none !important;
 }
 </style>

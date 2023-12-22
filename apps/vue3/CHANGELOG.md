@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/tsparticles/vue3/compare/v2.12.0...v3.0.0) (2023-12-22)
+
+
+### Bug Fixes
+
+* **example:** clean up Vite example and remove dead code ([7064feb](https://github.com/tsparticles/vue3/commit/7064feb638a503a0bb158c49d0a76d16142bede2))
+* **example:** remove console#log ([e537e3a](https://github.com/tsparticles/vue3/commit/e537e3ae2fb2fbc101f6ef18f2f5dec518407f34))
+
+
+### Features
+
+* updated for v3 ([c49ca9f](https://github.com/tsparticles/vue3/commit/c49ca9f1aec1f7ddaa0de7806291a5c4c78eb848))
+
+
+
+
+
 # [2.12.0](https://github.com/tsparticles/vue3/compare/v2.11.1...v2.12.0) (2023-08-04)
 
 **Note:** Version bump only for package vue3-demo

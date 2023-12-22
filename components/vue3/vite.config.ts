@@ -14,17 +14,18 @@ export default defineConfig({
             fileName: format => `particles.${format}.js`,
         },
         rollupOptions: {
-            external: ["vue", "@tsparticles/engine"],
+            external: [ "vue", "@tsparticles/engine" ],
             output: {
                 // Provide global variables to use in the UMD build
                 // Add external deps here
                 globals: {
                     vue: "Vue",
+                    "@tsparticles/engine": "tsParticles",
                 },
             },
         },
     },
-    plugins: [vue(), vueJsx(), dts()],
+    plugins: [ vue(), vueJsx(), dts() ],
     resolve: {
         alias: {
             "@": fileURLToPath(new URL("./src", import.meta.url)),

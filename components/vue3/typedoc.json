@@ -4,7 +4,7 @@
     "./src/"
   ],
   "entryPointStrategy": "expand",
-  "name": "tsParticles Angular Component",
+  "name": "tsParticles Vue 3.x Component",
   "includeVersion": true,
   "hideGenerator": true,
   "out": "./docs",

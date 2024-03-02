@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { nextTick, onMounted, onUnmounted } from "vue";
+import { nextTick, onMounted, onUnmounted, watch } from "vue";
 import { type Container, type ISourceOptions, type Engine, tsParticles } from "@tsparticles/engine";
 
 export type IParticlesProps = ISourceOptions;
@@ -14,6 +14,7 @@ const props = defineProps<{
     id: string;
     options?: IParticlesProps;
     url?: string;
+    theme?: string;
 }>();
 
 const emit = defineEmits<{
@@ -60,4 +61,12 @@ onUnmounted(() => {
     container.destroy();
     container = undefined;
 });
+
+watch(
+    () => props.theme,
+    () => {
+        container?.loadTheme(props.theme);
+    },
+    { immediate: true, deep: true },
+);
 </script>

@@ -3,8 +3,8 @@
 </template>
 
 <script setup lang="ts">
-import { nextTick, onMounted, onUnmounted, watch } from "vue";
 import { type Container, type ISourceOptions, type Engine, tsParticles } from "@tsparticles/engine";
+import { nextTick, onMounted, onUnmounted, watch } from "vue";
 
 export type IParticlesProps = ISourceOptions;
 
@@ -28,6 +28,7 @@ const initEventHandler = (e: Event) => {
 
     loadParticles();
 };
+
 addEventListener("particlesInit", initEventHandler);
 
 const loadParticles = async () => {
@@ -58,8 +59,11 @@ onUnmounted(() => {
     if (!container) {
         return;
     }
+
     container.destroy();
+
     container = undefined;
+
     removeEventListener("particlesInit", initEventHandler);
 });
 

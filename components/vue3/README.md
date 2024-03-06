@@ -36,11 +36,11 @@ createApp(App).use(Particles, {
 ```html
 <template>
     <div id="app">
-        <vue-particles id="tsparticles" :particlesLoaded="particlesLoaded" url="http://foo.bar/particles.json" />
+        <vue-particles id="tsparticles" @particles-loaded="particlesLoaded" url="http://foo.bar/particles.json" />
 
         <vue-particles
             id="tsparticles"
-            :particlesLoaded="particlesLoaded"
+            @particles-loaded="particlesLoaded"
             :options="{
                     background: {
                         color: {

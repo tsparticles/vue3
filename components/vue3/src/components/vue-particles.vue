@@ -3,8 +3,8 @@
 </template>
 
 <script setup lang="ts">
-import { nextTick, onMounted, onUnmounted } from "vue";
 import { type Container, type ISourceOptions, type Engine, tsParticles } from "@tsparticles/engine";
+import { nextTick, onMounted, onUnmounted } from "vue";
 
 export type IParticlesProps = ISourceOptions;
 
@@ -58,6 +58,7 @@ onUnmounted(() => {
     }
 
     container.destroy();
+
     container = undefined;
 });
 </script>

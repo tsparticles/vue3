@@ -21,13 +21,14 @@ const emit = defineEmits<{
     (e: "particlesLoaded", container?: Container): void;
 }>();
 
-addEventListener("particlesInit", (e: Event) => {
+const initEventHandler = (e: Event) => {
     const evt = e as CustomEvent<Engine>;
 
     engine = evt.detail;
 
     loadParticles();
-});
+};
+addEventListener("particlesInit", initEventHandler);
 
 const loadParticles = async () => {
     if (!engine) {
@@ -57,9 +58,9 @@ onUnmounted(() => {
     if (!container) {
         return;
     }
-
     container.destroy();
     container = undefined;
+    removeEventListener("particlesInit", initEventHandler);
 });
 
 watch(

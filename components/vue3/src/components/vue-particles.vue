@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import { type Container, type ISourceOptions, type Engine, tsParticles } from "@tsparticles/engine";
-import { nextTick, onMounted, onUnmounted } from "vue";
+import { nextTick, onMounted, onUnmounted, watch } from "vue";
 
 export type IParticlesProps = ISourceOptions;
 
@@ -14,19 +14,22 @@ const props = defineProps<{
     id: string;
     options?: IParticlesProps;
     url?: string;
+    theme?: string;
 }>();
 
 const emit = defineEmits<{
     (e: "particlesLoaded", container?: Container): void;
 }>();
 
-addEventListener("particlesInit", (e: Event) => {
+const initEventHandler = (e: Event) => {
     const evt = e as CustomEvent<Engine>;
 
     engine = evt.detail;
 
     loadParticles();
-});
+};
+
+addEventListener("particlesInit", initEventHandler);
 
 const loadParticles = async () => {
     if (!engine) {
@@ -60,5 +63,15 @@ onUnmounted(() => {
     container.destroy();
 
     container = undefined;
+
+    removeEventListener("particlesInit", initEventHandler);
 });
+
+watch(
+    () => props.theme,
+    () => {
+        container?.loadTheme(props.theme);
+    },
+    { immediate: true, deep: true },
+);
 </script>

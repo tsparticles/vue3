@@ -14,6 +14,8 @@ const particlesLoaded = async (container: Container) => {
     <vue-particles
       id="tsparticles"
       :options="options"
+      class="demo-particles"
+      :style="{ position: 'fixed', inset: 0, zIndex: -1 }"
       @particles-loaded="particlesLoaded"
     />
   </main>

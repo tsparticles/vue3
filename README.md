@@ -132,6 +132,28 @@ code:
 declare module "@tsparticles/vue3";
 ```
 
+### Styling the particles container
+
+`vue-particles` accepts `class` and `style` attributes on its root element:
+
+```html
+<vue-particles
+    id="tsparticles"
+    :options="options"
+    class="demo-particles"
+    :style="{ position: 'fixed', inset: 0, zIndex: -1 }"
+/>
+```
+
+## Workspace Build Architecture
+
+This repository now supports both orchestrators:
+
+- `pnpm run build`
+- `pnpm run build:ci`
+- `pnpm run build:lerna`
+- `pnpm run build:nx`
+
 ## Demos
 
 The demo website is [here](https://particles.js.org)
